@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: yellowgreen;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 2px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            
+        }
+        button:hover {
+            background-color: red;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <form id="expenseForm">
+        <label for="expenseName">Expense Name:</label><br>
+        <input type="text" id="expenseName" name="expenseName"><br><br>
+        <label for="expenseAmount">Expense Amount:</label><br>
+        <input type="number" id="expenseAmount" name="expenseAmount"><br><br>
+        <button type="button" onclick="addExpense()">Add Expense</button>
+    </form>
+    <h3>Expenses</h3>
+    <ul id="expenseList"></ul>
+
+<script src="app.js"></script>
+</body>
+</html>
