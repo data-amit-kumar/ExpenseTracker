@@ -1,4 +1,4 @@
-let expenses = JSON.parse(localStorage.getItem('expenses')) ;
+let expenses = JSON.parse(localStorage.getItem('expenses')) || [];
 
         function exp() {
             const expenseList = document.getElementById('expenseList');
@@ -6,7 +6,7 @@ let expenses = JSON.parse(localStorage.getItem('expenses')) ;
             expenses.forEach((expense, index) => {
                 const li = document.createElement('li');
                 li.innerHTML = `
-                    <span>${expense.name} - ${expense.amount}</span>
+                    <span>${expense.name} -- ${expense.amount}</span>
                     <button onclick="editExpense(${index})">Edit</button>
                     <button onclick="deleteExpense(${index})">Delete</button>
                 `;
